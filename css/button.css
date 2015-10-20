@@ -1,0 +1,164 @@
+.button
+{
+   z-index: 1;
+   position: relative;
+   text-align:right;
+   display:inline-block;
+   padding:3px 10px;
+   color:#444;
+   
+   border:2px solid #000;
+   
+   cursor:pointer;
+   
+   -webkit-border-radius: 10px;
+   -moz-border-radius: 10px;
+   border-radius: 10px;
+   
+   transition:background 0.2s;
+   -moz-transition:background 0.2s;
+   -webkit-transition:background 0.2s;
+   -o-transition:background 0.2s;
+   
+   -moz-user-select:none;
+   -khtml-user-select: none;
+}
+
+
+
+
+.menu_buttons
+{
+   z-index: 1;
+   position: relative;
+   /*position:absolute;
+   right:70px;
+   bottom:10px;*/
+}
+
+.menu_button
+{
+   z-index: 1;
+   position: relative;
+   margin:0 auto;
+   text-align:center;
+   margin-top:10px;
+   display:block;
+   padding:10px;
+   width:350px;
+   font-size:40px;
+   color:#444;
+   
+   border:2px solid #000;
+   border-right-width:2px;
+   
+   cursor:pointer;
+   
+   -webkit-border-radius: 10px;
+   -moz-border-radius: 10px;
+   border-radius: 10px;
+
+ 
+   transition:background 0.2s;
+   -moz-transition:background 0.2s;
+   -webkit-transition:background 0.2s;
+   -o-transition:background 0.2s;
+   
+   -moz-user-select:none;
+   -khtml-user-select: none;
+}
+
+
+/*
+         PUZZLE BUTTONS
+*/
+
+.puzzle_buttons
+{
+   z-index: 1;
+   position: relative;
+   position:absolute;
+   left:28px;
+   bottom:-54px;
+}
+
+.puzzle_button
+{
+   z-index: 1;
+   position: relative;
+   text-align:middle;
+   display:inline-block;
+   padding:5px 10px;
+   width:160px;
+   font-size:25px;
+   color:#444;
+   
+   border:2px solid #000;
+   border-top-width:0px;
+   
+   cursor:pointer;
+   
+   -moz-border-radius-topleft: 0px;
+   -moz-border-radius-topright: 0px;
+   -moz-border-radius-bottomright: 20px;
+   -moz-border-radius-bottomleft: 20px;
+   -webkit-border-radius: 0px 0px 20px 20px;
+   border-radius: 0px 0px 20px 20px;
+   
+   transition:background 0.2s;
+   -moz-transition:background 0.2s;
+   -webkit-transition:background 0.2s;
+   -o-transition:background 0.2s;
+   
+   -moz-user-select:none;
+   -khtml-user-select: none;
+}
+
+
+/*
+         COLORS
+*/
+
+
+.blue
+{
+   background:#91a5c9;
+   border-color:#0047C1;
+}
+.blue:hover
+{
+   background:#7796cd;
+}
+
+
+.orange
+{
+   background:#cda2ab;
+   border-color:#d03c00;
+}
+.orange:hover
+{
+   background:#cc8292;
+}
+
+
+.green
+{
+   background:#93d997;
+   border-color:#009d07;
+}
+.green:hover
+{
+   background:#6cd172;
+}
+
+
+.gray
+{
+   background:#b1b1b1;
+   border-color:#4a4a4a;
+}
+.gray:hover
+{
+   background:#a0a0a0;
+}

@@ -1,0 +1,131 @@
+#gui
+{
+
+   
+
+   
+   -moz-user-select:none;
+   -khtml-user-select: none;
+}
+
+
+
+
+.window {
+	position:absolute;
+	z-index:2;
+   background:#fff;
+   margin-left: 24.81375%;
+   display:block;
+   width:46.66666666666667%;
+   height:60.5%;
+   top:23.1333333333333%;
+	
+   -moz-user-select:none;
+   -khtml-user-select: none;
+}
+
+
+.status {
+	padding-top:20px;
+	width: 100%;
+	font-weight: bold;
+	font-style: italic;
+	font-size: 30pt;
+	position: absolute;
+	z-index: 2;
+	color:green;
+	font-family: Calibri, Arial, Verdana;
+}
+.en-markup-crop-options {
+    top: 18px !important;
+    left: 50% !important;
+    margin-left: -100px !important;
+    width: 200px !important;
+    border: 2px rgba(255,255,255,.38) solid !important;
+    border-radius: 4px !important;
+}
+
+.en-markup-crop-options div div:first-of-type {
+    margin-left: 0px !important;
+}
+.cover {
+  width: 100%;
+  height: 100%;
+  display: block;
+  z-index: 0;
+  position: fixed;
+  top:0px;
+  left: 0px;
+  background-image: url("../img/bg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+.button-pass{
+	cursor: pointer;
+	margin-top:40px;
+	background: none;
+	border-radius:40px; 
+	padding-top:20px;
+	padding-bottom:20px;
+	padding-left:40px;
+	padding-right:40px;
+	outline:none;
+	border:1px solid green;
+	font-size:20pt;
+	color:green;
+}
+.button-pass:active{
+	color:#fff;
+	background: green;
+}
+.informer{
+
+	position:absolute;
+	z-index:3;
+color:#fff;
+   display:none;
+   width:300px;
+	padding: 20px;
+   top:25%;
+   left:50%;
+   margin-left: -150px;
+	font-size: 20pt;
+		font-family: Calibri, Arial, Verdana;
+
+}
+
+.error_type{
+	display: block;
+	background: red;
+}
+
+.success_type{
+	display: block;
+	background: green;
+}
+
+.imposible {
+	font-family: Calibri, Arial, Verdana;
+	color: #6B0F0C;
+	font-size: 50px;
+	margin-bottom: 30px;
+	font-weight: bold;
+}
+
+.wide{
+	font-family: Calibri, Arial, Verdana;
+	color:#D3000A;
+	font-style: italic;
+	font-weight: bold;
+	font-size: 30px;
+}
+
+.miss{
+	font-family: Calibri, Arial, Verdana;
+		color:#D3000A;
+	font-style: italic;
+	font-weight: bold;
+	font-size: 25px;
+}

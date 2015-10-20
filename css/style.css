@@ -1,0 +1,286 @@
+body
+{
+   text-align:center;
+   background:#fff;
+   font-family:Arial;
+   font-size:20px;
+}
+
+#canvas
+{
+   background:#b9b9b9;
+   margin:0 auto;
+   display:block;
+   border:2px solid #000;
+   
+   -webkit-border-radius: 20px;
+   -moz-border-radius: 20px;
+   border-radius: 20px;
+   
+   -moz-user-select:none;
+   -khtml-user-select: none;
+}
+
+h1
+{
+   text-align:center;
+   color:#262626;
+   font-size:100px;
+   margin-bottom:50px;
+   
+   cursor:default;
+}
+
+#titletext
+{
+	font-size:25px;
+	position:relative;
+	top:-50px;
+	   color:#262626;
+}
+
+a
+{
+   text-decoration:none;
+   font-weight:bold;
+   color:#666;
+   margin:3px;
+}
+
+#socials
+{
+
+}
+
+#socials .social
+{
+	margin:12px 0px;
+	width:1px;
+}
+
+#socials .fb-like
+{
+	margin:8px 0px;
+}
+
+.button
+{
+   text-align:right;
+   display:inline-block;
+   padding:3px 10px;
+   color:#444;
+   
+   border:2px solid #000;
+   
+   cursor:pointer;
+   
+   -webkit-border-radius: 10px;
+   -moz-border-radius: 10px;
+   border-radius: 10px;
+   
+   transition:background 0.2s;
+   -moz-transition:background 0.2s;
+   -webkit-transition:background 0.2s;
+   -o-transition:background 0.2s;
+   
+   -moz-user-select:none;
+   -khtml-user-select: none;
+}
+
+
+
+
+.menu_buttons
+{
+   /*position:absolute;
+   right:70px;
+   bottom:10px;*/
+}
+
+.menu_button
+{
+   margin:0 auto;
+   text-align:center;
+   margin-top:10px;
+   display:block;
+   padding:10px;
+   width:350px;
+   font-size:40px;
+   color:#444;
+   
+   border:2px solid #000;
+   border-right-width:2px;
+   
+   cursor:pointer;
+   
+   -webkit-border-radius: 10px;
+   -moz-border-radius: 10px;
+   border-radius: 10px;
+
+ 
+   transition:background 0.2s;
+   -moz-transition:background 0.2s;
+   -webkit-transition:background 0.2s;
+   -o-transition:background 0.2s;
+   
+   -moz-user-select:none;
+   -khtml-user-select: none;
+}
+
+
+/*
+         PUZZLE BUTTONS
+*/
+
+.puzzle_buttons
+{
+   position:absolute;
+   left:28px;
+   bottom:-54px;
+}
+
+.puzzle_button
+{
+   text-align:middle;
+   display:inline-block;
+   padding:5px 10px;
+   width:160px;
+   font-size:25px;
+   color:#444;
+   
+   border:2px solid #000;
+   border-top-width:0px;
+   
+   cursor:pointer;
+   
+   -moz-border-radius-topleft: 0px;
+   -moz-border-radius-topright: 0px;
+   -moz-border-radius-bottomright: 20px;
+   -moz-border-radius-bottomleft: 20px;
+   -webkit-border-radius: 0px 0px 20px 20px;
+   border-radius: 0px 0px 20px 20px;
+   
+   transition:background 0.2s;
+   -moz-transition:background 0.2s;
+   -webkit-transition:background 0.2s;
+   -o-transition:background 0.2s;
+   
+   -moz-user-select:none;
+   -khtml-user-select: none;
+}
+
+
+/*
+         COLORS
+*/
+
+
+.blue
+{
+   background:#91a5c9;
+   border-color:#0047C1;
+}
+.blue:hover
+{
+   background:#7796cd;
+}
+
+
+.orange
+{
+   background:#cda2ab;
+   border-color:#d03c00;
+}
+.orange:hover
+{
+   background:#cc8292;
+}
+
+
+.green
+{
+   background:#93d997;
+   border-color:#009d07;
+}
+.green:hover
+{
+   background:#6cd172;
+}
+
+
+.gray
+{
+   background:#b1b1b1;
+   border-color:#4a4a4a;
+}
+.gray:hover
+{
+   background:#a0a0a0;
+}
+
+#game_finished_menu
+{
+   margin-top:300px;
+}
+
+#game_escape_menu
+{
+   margin-top:130px;
+}
+
+#create_puzzle_menu
+{
+   margin-top:525px;
+}
+
+#create_puzzle_menu .button
+{
+   display:inline-block;
+   width:182px;
+}
+
+#create_puzzle_help
+{
+   margin-left:100px;
+   padding:30px 10px;
+   width:580px;
+   max-height:400px;
+   overflow:auto;
+   color:#262626;
+   background:#91a5c9;
+   border:2px solid #0047C1;
+   
+   -webkit-border-radius: 10px;
+   -moz-border-radius: 10px;
+   border-radius: 10px;
+}
+
+#create_puzzle_help ul
+{
+   text-align:left;
+}
+
+#gui
+{
+   width:800px;
+   position:absolute;
+   top:0px;
+   margin-top:70px;
+   width:800px;
+   height:530px;
+   
+   -moz-user-select:none;
+   -khtml-user-select: none;
+}
+
+#main_menu .menu_buttons
+{
+   position:absolute;
+   right:70px;
+   bottom:10px;
+}
+
+#choose_difficulty_menu
+{
+   margin-top:120px;
+}

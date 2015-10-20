@@ -1,0 +1,41 @@
+#game_finished_menu
+{
+   margin-top:300px;
+}
+
+#game_escape_menu
+{
+   margin-top:130px;
+}
+
+#create_puzzle_menu
+{
+   margin-top:525px;
+}
+
+#create_puzzle_menu .button
+{
+   display:inline-block;
+   width:182px;
+}
+
+#create_puzzle_help
+{
+   margin-left:100px;
+   padding:30px 10px;
+   width:580px;
+   max-height:400px;
+   overflow:auto;
+   color:#262626;
+   background:#91a5c9;
+   border:2px solid #0047C1;
+   
+   -webkit-border-radius: 10px;
+   -moz-border-radius: 10px;
+   border-radius: 10px;
+}
+
+#create_puzzle_help ul
+{
+   text-align:left;
+}
