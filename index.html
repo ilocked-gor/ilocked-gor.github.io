@@ -1,81 +1,98 @@
 <!DOCTYPE html>
 <!-- saved from url=(0037)http://unsnarl-it.jonasjuffinger.com/ -->
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-      <title>Unsnarl it!</title>
-      
-      <meta name="keywords" content="unsnarl-it, game, puzzle, jonas, juffinger, html5, javascript, chrome experiments">
-		<meta name="description" content="Unsnarl it! An addicting puzzle game by Jonas Juffinger. ">
-      
-      <link rel="stylesheet" type="text/css" href="css/core.css">
-      <link rel="stylesheet" type="text/css" href="css/gui.css">
-      <link rel="stylesheet" type="text/css" href="css/menu.css">
-      <link rel="stylesheet" type="text/css" href="css/game.css">
-      <link rel="stylesheet" type="text/css" href="css/button.css">
-      <link rel="stylesheet" type="text/css" href="css/magic.min.css">
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Unsnarl it!</title>
+
+    <meta name="keywords" content="unsnarl-it, game, puzzle, jonas, juffinger, html5, javascript, chrome experiments">
+    <meta name="description" content="Unsnarl it! An addicting puzzle game by Jonas Juffinger. ">
+
+    <link rel="stylesheet" type="text/css" href="css/core.css">
+    <link rel="stylesheet" type="text/css" href="css/gui.css">
+    <link rel="stylesheet" type="text/css" href="css/menu.css">
+    <link rel="stylesheet" type="text/css" href="css/game.css">
+    <link rel="stylesheet" type="text/css" href="css/button.css">
+    <link rel="stylesheet" type="text/css" href="css/magic.min.css">
 </head>
 
-   <body oncontextmenu="" onmousemove="mousemovehandler(event)" onmousedown="mousedownhandler(event)" onmouseup="mouseuphandler(event)">
+<body oncontextmenu="" onmousemove="mousemovehandler(event)" onmousedown="mousedownhandler(event)"
+      onmouseup="mouseuphandler(event)" style="min-width: 1024px">
+<div class="container centered">
+    <div class="informer"></div>
+    <div class="centered status">
+        <span id="status" class="transparentMessage">ПЕРВЫЙ УРОВЕНЬ ЗАЩИТЫ</span>
+        <span id="informer" class="informer"></span>
+    </div>
 
-	<div class="informer magictime"></div>
+    <canvas style="display:none;overflow:hidden;position:relative;" class="dialog centered step2" id="canvas"
+            width="800"
+            height="600" unselectable="on">
+    </canvas>
 
-	<div class="status magictime puffIn">ПЕРВЫЙ УРОВЕНЬ ЗАЩИТЫ</div>
-      
-	<img style="z-index:2; position:absolute;right:10px;bottom:10px;" src="img/logo.png" width="300px" alt="">
+    <img style="z-index:2; position:absolute;right:10px;bottom:10px;" src="img/logo.png" width="300px" alt="">
 
-	<div class="window step1 magictime slideLeftRetourn">
-	<div style="padding:50px;">
-		<p style="margin-bottom:50px; color:green;">Введите пароль</p>
-		<input id="password_input" style="border-radius:40px; padding:20px;outline:none;border:1px solid green;font-size:20pt;color:green;" type="text"><br>
-		<button id="step1_check" class="button-pass">Войти</button>
-	</div>
-	</div>
-
-
-   <canvas style="display:none;overflow:hidden;position:relative;" class="window step2 magictime" id="canvas" width="800" height="600" unselectable="on">
-      </canvas>
-
-
-	<div style="display:none;background:black;" class="window step3 magictime">
-		<div style="cursor:pointer;padding:25px;" class="viewMis">
-		<div class="imposible">MISSION: IMPOSSIBLE</div>
-		<div class="wide">Operation Wide Web</div>
-		<div class="miss">Нажмите для получения миссии</div>
-		</div>
-		<div style="padding:25px;display:none; font-size:20px;font-family:Calibri, Arial, Verdana;color:green;font-weight:bold;" class="viewEnd magictime">
-		Отлично агенты. <br>После выполнения этого задания вы получите отличный бонус. Итак Вот ваше задание. После  прохождения операции ГОРГОНА, на гороховой 32, Вы были сфотографированы. Найдите свою фотографию и разместите её у себя на стене с хэштегами #ilocked #миссияневыполнима. Пришлите ссылку на размещенную Вами фотографию на почту  <a href="mailto:ilocked.goroh32@gmail.com">ilocked.goroh32@gmail.com</a>, в качестве подтверждения выполненной миссии. В ответ на Вашу почту будет выслана инструкция о том, как получить Ваш бонус.</div>
-	</div>
+    <div class="dialog centered step1">
+        <div style="padding:50px;">
+            <p style="margin-bottom:50px; font-size: 20pt">Введите пароль</p>
+            <input id="password_input"
+                   style="border-radius:40px; padding:20px;outline:none;border:1px solid;font-size:20pt;"
+                   type="text"><br>
+            <button id="step1_check" class="button-pass">Войти</button>
+        </div>
+    </div>
 
 
+    <div style="display:none;" class="dialog centered step3">
+        <div style="cursor:pointer;padding:25px;" class="viewMis">
+            <div class="impossible">МИССИЯ НЕВЫПОЛНИМА</div>
+            <div class="wide">Operation Network</div>
+            <div class="miss">Нажмите для получения миссии</div>
+        </div>
+        <div style="padding:25px;display:none; font-size:24px;"
+             class="viewEnd">
+            Отлично агенты. <br>После выполнения этого задания вы получите отличный бонус. Итак Вот ваше задание. После
+            прохождения операции ГОРГОНА, на гороховой 32, Вы были сфотографированы. Найдите свою фотографию и
+            разместите её
+            у себя на стене с хэштегами #ilocked #миссияневыполнима. Пришлите ссылку на размещенную Вами фотографию на
+            почту
+            <a href="mailto:ilocked.goroh32@gmail.com">ilocked.goroh32@gmail.com</a>, в качестве подтверждения
+            выполненной
+            миссии. В ответ на Вашу почту будет выслана инструкция о том, как получить Ваш бонус.
+        </div>
+    </div>
 
 
-      <div id="gui" style="display: none;position:relative;z-index:1;" unselectable="on">
-         <!--MENU-->
-         <div id="main_menu" class="menu" style="display: none;">
+    <div id="gui" style="display: none;position:relative;z-index:1;" unselectable="on">
+        <!--MENU-->
+        <div id="main_menu" class="menu" style="display: none;">
 
-         </div>
-         <div id="choose_difficulty_menu" class="menu" style="display: none;">
-   
-         </div>
-           <div id="game_finished_menu" class="menu" style="display: none;">
+        </div>
+        <div id="choose_difficulty_menu" class="menu" style="display: none;">
 
-         </div>
-         
+        </div>
+        <div id="game_finished_menu" class="menu" style="display: none;">
 
-        
-      </div>
+        </div>
 
 
-      <div class="cover"></div>
+    </div>
 
-  	  <script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
-      <script type="text/javascript" src="js/core.js"></script>
-      <script type="text/javascript" src="js/ajax.js"></script>
-      <script type="text/javascript" src="js/gui.js"></script>
-      <script type="text/javascript" src="js/game.js"></script>
-      <script type="text/javascript" src="js/menu.js"></script>
-      <script type="text/javascript" src="js/vector.js"></script>
-      <script type="text/javascript" src="js/event.js"></script>
-      <script type="text/javascript" src="js/app.js"></script>
 
-   </body>
-   </html>
+</div>
+
+
+<div class="cover"></div>
+
+<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+<script type="text/javascript" src="js/core.js"></script>
+<script type="text/javascript" src="js/ajax.js"></script>
+<script type="text/javascript" src="js/gui.js"></script>
+<script type="text/javascript" src="js/game.js"></script>
+<script type="text/javascript" src="js/menu.js"></script>
+<script type="text/javascript" src="js/vector.js"></script>
+<script type="text/javascript" src="js/event.js"></script>
+<script type="text/javascript" src="js/app.js"></script>
+
+</body>
+</html>

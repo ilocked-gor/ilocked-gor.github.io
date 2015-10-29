@@ -1,74 +1,64 @@
 var password = "test";
 
-$("#step1_check").click(function(){
-if($("#password_input").val() == ""){
-	return null;
-}
+$("#step1_check").click(function () {
+    if ($("#password_input").val() == "") {
+        return null;
+    }
 
-if($("#password_input").val() != password) {
-notify("error_type","Неверный пароль.");
-} else {
-$(".status").removeClass("puffIn").addClass("puffOut");
-
-
-var interval = window.setTimeout(function(){
-$(".status").text("ВТОРОЙ УРОВЕНЬ ЗАЩИТЫ").removeClass("puffOut").addClass("puffIn");
-},1000);
-
-$(".step1").removeClass("slideLeftRetourn").addClass("vanishOut");
+    if ($("#password_input").val() != password) {
+        notify("error_type", "Неверный пароль.");
+    } else {
+        //$("#status").removeClass("puffIn").addClass("puffOut");
 
 
-$(".step2").css("display","block");
+        $("#status").text("ВТОРОЙ УРОВЕНЬ ЗАЩИТЫ");
 
-init();
-$(".step1").remove();
-}
+        $(".step1").hide();
+
+
+        $(".step2").show();
+
+        init();
+//        $(".step1").remove();
+    }
 
 
 });
 
 
+function step3() {
+    $("#status").hide();
+    $(".step2").hide();
 
-
-function step3(){
-$(".status").removeClass("puffIn").addClass("puffOut");
-$(".step2").removeClass("slideLeftRetourn").addClass("vanishOut");
-
-$(".step3").css("display","block").addClass("PuffIn");
-$("#canvas").remove();
+    $(".step3").show();
+    $("#canvas").remove();
 
 }
 
-var inter = window.setInterval(function(){
-	if(finished == true) {
-		step3();
-	}
-},500);
+var inter = window.setInterval(function () {
+    if (finished == true) {
+        step3();
+    }
+}, 500);
 
 
+$(".viewMis").click(function () {
 
-
-$(".viewMis").click(function(){
-
-	$(this).css("display","none");
-	$(".viewEnd").css("display","block").addClass("pushIn");
+    $(this).css("display", "none");
+    $(".viewEnd").css("display", "block").addClass("pushIn");
 });
 
 
+function notify(type, text) {
 
-
-function notify(type, text){
-
-$(".informer").removeClass("error_type");
-$(".informer").removeClass("success_type");
-$(".informer").removeClass("vanishOut");
-$(".informer").text(textMessage).addClass(type).addClass("slideLeftRetourn");
-
-var interval = window.setTimeout(function(){
-
-	$(".informer").removeClass("slideLeftRetourn");
-	$(".informer").addClass("vanishOut");
-	window.removeTimeout(intervel);
-},2000);
+    var status = $("#status");
+    var informer = $("#informer");
+    status.hide();
+    informer.show();
+    informer.text(text);
+    window.setTimeout(function () {
+        status.show();
+        informer.hide();
+    }, 2000);
 
 }
