@@ -129,7 +129,9 @@
     border-radius: 40px;
 }
 
-
+.impossible {
+    font-family: myFirstFont, serif;
+}
 
 @font-face {
     font-family: myFirstFont;
@@ -137,5 +139,5 @@
 }
 
 body {
-    font-family: myFirstFont, serif;
+    font-family: Verdana, serif;
 }
